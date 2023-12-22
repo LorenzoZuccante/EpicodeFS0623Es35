@@ -48,7 +48,7 @@ const MainContent = () => {
         `https://striveschool-api.herokuapp.com/api/comments/${movieId}`,
         {
           headers: {
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0NDZhODJjNmEwZDAwMTg0OTU5YjMiLCJpYXQiOjE3MDMxNjE5MjksImV4cCI6MTcwNDM3MTUyOX0.gL7TeofYi7vcnjsGmGcaS7WPEIubZO-qPZUXk4AqW9Y',
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0NDZhODJjNmEwZDAwMTg0OTU5YjMiLCJpYXQiOjE3MDMxNjE5MjksImV4cCI6MTcwNDM3MTUyOX0.gL7TeofYi7vcnjsGmGcaS7WPEIubZO-qPZUXk4AqW9Y`, 
           },
         }
       );
@@ -65,12 +65,13 @@ const MainContent = () => {
       await axios.post(
         'https://striveschool-api.herokuapp.com/api/comments/',
         {
+          rate: 1,
           comment: newComment,
           elementId: selectedMovie?.imdbID || '',
         },
         {
           headers: {
-            Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0NDZhODJjNmEwZDAwMTg0OTU5YjMiLCJpYXQiOjE3MDMxNjE5MjksImV4cCI6MTcwNDM3MTUyOX0.gL7TeofYi7vcnjsGmGcaS7WPEIubZO-qPZUXk4AqW9Y',
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTc0NDZhODJjNmEwZDAwMTg0OTU5YjMiLCJpYXQiOjE3MDMxNjE5MjksImV4cCI6MTcwNDM3MTUyOX0.gL7TeofYi7vcnjsGmGcaS7WPEIubZO-qPZUXk4AqW9Y`, 
           },
         }
       );
